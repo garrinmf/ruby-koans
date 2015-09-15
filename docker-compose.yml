@@ -1,0 +1,6 @@
+ruby:
+  image: ruby
+  ports:
+   - 3000:3000
+  volumes:
+   - data/code:/code
