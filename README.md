@@ -27,8 +27,15 @@ git clone https://github.com/georgeyord/ruby-koans.git
 **Run "path_to_enlightenment.rb"**
 
 ```
-docker-compose run ruby ruby -r ./path_to_enlightenment.rb
+docker-compose run ruby ruby ./path_to_enlightenment.rb
 ```
+OR
+```
+docker-compose run ruby 
+[inside docker container] ruby ./path_to_enlightenment.rb
+```
+
+> Using the second otpion you get __inside__ docker contianer and then you run the ruby commands
 
 **Change the code to progress in Koans**
 Edit the files placed in `data/code/koans`
@@ -40,7 +47,7 @@ then, rerun the docker-compose command to see what you achieved.
 **Start an interactive ruby shell (`irb`)**
 
 ```
-docker-compose run ruby
+docker-compose run ruby irb
 ```
 
 **Run a custom file you added in `data/code`**
