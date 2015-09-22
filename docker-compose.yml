@@ -1,5 +1,6 @@
 ruby:
   image: ruby
+  working_dir: /code/koans
   ports:
    - 3000:3000
   volumes:
