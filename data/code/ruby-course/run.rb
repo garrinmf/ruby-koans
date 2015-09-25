@@ -1,5 +1,0 @@
-load "run1.rb"
-load "run2.rb"
-load "run3.rb"
-load "run4.rb"
-load "knuckleheads.rb"
