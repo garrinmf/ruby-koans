@@ -1,7 +1,7 @@
 ruby:
   image: ruby
   command: bash
-  working_dir: /code/koans
+  working_dir: /code/ruby-course
   ports:
    - 3000:3000
   volumes:
