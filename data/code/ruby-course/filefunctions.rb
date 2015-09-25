@@ -2,7 +2,7 @@ module FileFunctions
   def load_players(filename, treasures)
     CSV.foreach(filename, headers: true, header_converters: :symbol, converters: :all) do |row|
       player_hash = Hash[row.headers[0..-1].zip(row.fields[0..-1])]
-      player = Player2.new(player_hash[:name], player_hash[:health])
+      player = Player2.new(player_hash)
       player.found_treasure(treasures[rand(treasures.length)])
       add_player(player)
     end
@@ -11,8 +11,7 @@ module FileFunctions
   def load_treasures(filename)
     treasures = []
     CSV.foreach(filename, headers: true, header_converters: :symbol, converters: :all) do |row|
-      treasure_hash = Hash[row.headers[0..-1].zip(row.fields[0..-1])]
-      treasures << Treasure.new(treasure_hash[:name], treasure_hash[:points])
+      treasures << Treasure2.new(Hash[row.headers[0..-1].zip(row.fields[0..-1])])
     end
     treasures
   end

@@ -1,3 +1,4 @@
+require_relative 'hashinitiator'
 require_relative 'gameturn'
 require_relative 'dice'
 require_relative 'game'

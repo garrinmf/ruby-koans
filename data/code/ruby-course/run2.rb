@@ -1,3 +1,4 @@
+require_relative 'hashinitiator'
 require_relative 'player'
 require_relative 'player2'
 require_relative 'treasure'

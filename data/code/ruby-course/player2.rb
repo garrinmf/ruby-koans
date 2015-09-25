@@ -1,11 +1,11 @@
 class Player2 < Player
+  include HashInitiator
   attr_accessor :health
 
-  def initialize(name, health = 100, found_treasures = {})
-    # Instance variables
-    @name = name
-    @health = health
-    @found_treasures = found_treasures
+  def initialize(*args)
+    @health = 100
+    @found_treasures = {}
+    args[0].is_a?(Hash) ? hash_initialize(args[0]) : super
   end
 
   def to_s

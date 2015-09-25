@@ -1,5 +1,6 @@
 require_relative 'gameturn'
 require_relative 'filefunctions'
+require_relative 'hashinitiator'
 require_relative 'dice'
 require_relative 'game'
 require_relative 'game2'
@@ -7,6 +8,7 @@ require_relative 'game3'
 require_relative 'player'
 require_relative 'player2'
 require_relative 'treasure'
+require_relative 'treasure2'
 require 'csv'
 
 knuckleheads = Game3.new 'Knuckleheads'
@@ -21,9 +23,10 @@ loop do
   when /^\d+$/
     puts "Let's  play #{answer} rounds"
     knuckleheads.play(answer.to_i, true)
-  when 'quit', 'exit', 'q'
     filename = knuckleheads.save_high_scores(knuckleheads.players)
     puts "Scores saved to #{filename}"
+  when 'quit', 'exit', 'q'
+    puts 'Bye bye!'
     break
   else
     puts "Please enter a number or 'quit'"

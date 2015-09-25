@@ -1,5 +1,6 @@
 require_relative 'gameturn'
 require_relative 'filefunctions'
+require_relative 'hashinitiator'
 require_relative 'dice'
 require_relative 'game'
 require_relative 'game2'
