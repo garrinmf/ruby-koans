@@ -1,11 +1,6 @@
-# Ruby koans
-The Koans walk you along the path to enlightenment in order to learn Ruby. The goal is to learn the Ruby language, syntax, structure, and some common functions and libraries. You will also learn about ruby culture.
-
-http://rubykoans.com/
-
 # Usage of the docker container
 
-To use this docker container to run Ruby koans follow these steps:
+To use this docker container to run ruby follow these steps:
 
 **Ensure you have docker and docker-compose installed**
 
@@ -24,34 +19,15 @@ chmod +x /usr/local/bin/docker-compose
 git clone https://github.com/georgeyord/ruby-koans.git
 ```
 
-**Run "path_to_enlightenment.rb"**
+
+**Run the complete solution in `data/code/ruby-course`**
 
 ```
-docker-compose run ruby ruby ./path_to_enlightenment.rb
+docker-compose run ruby run.rb
 ```
-OR
-```
-docker-compose run ruby 
-[inside docker container] ruby ./path_to_enlightenment.rb
-```
-
-> Using the second otpion you get __inside__ docker contianer and then you run the ruby commands
-
-**Change the code to progress in Koans**
-Edit the files placed in `data/code/koans`
-
-then, rerun the docker-compose command to see what you achieved.
-
-## Other goodies
 
 **Start an interactive ruby shell (`irb`)**
 
 ```
 docker-compose run ruby irb
-```
-
-**Run a custom file you added in `data/code`**
-
-```
-docker-compose run ruby -r ../[custom file]
 ```
